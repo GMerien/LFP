@@ -15,8 +15,11 @@
       "prefix": "lfp",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/lfp-client",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -67,8 +70,11 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "browserTarget": "lfp-client:build"
           },
           "configurations": {
