@@ -1,0 +1,7 @@
+<div id="quadrant-container">
+    <input class="bg-black text-white disabled:text-green text-6xl text-center w-full" value="0" [(ngModel)]="duration" [disabled]="buttonDisabled">
+</div>
+
+<div id="countdown-button-container w-full">
+    <button class="text-white disabled:text-green bg-black border-2 border-white h-10 w-40 " (click)="takePicture()" [disabled]="buttonDisabled">Take picture</button>
+</div>
